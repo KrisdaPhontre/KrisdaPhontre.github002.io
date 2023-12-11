@@ -1,154 +1,136 @@
 * {
+  margin: 0;  padding: 0;
   box-sizing: border-box;
 }
 
-.Wellcome {
-    background-color: aqua;
-    width: 100%;
-    height: 100px;
-    border-radius: 0px;
-}
-
-h1 {
-    font-size: 60px;
-    color: #209ad6;
-    margin: 0;
-    text-align: center;
-
-}
-
-.icon-bar {
-  position: fixed;
-    margin: 3rem 20px;
-    width: 12%;
-    height: 50%;
-    background-color: #555;
-    overflow: auto;
-    border-radius: 10px;
-    display: none;
-    right: 0;
-  }
-
   .overlay {
-    height: 100%;
-    width: 100%;
-    display: none;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
-  }
-  
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
   .overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
   }
-  
+
   .overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
   }
-  
+
   .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
+  color: #f1f1f1;
   }
-  
+
   .overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
+  position: absolute;
+  top: 20px;  right: 45px;
+  font-size: 60px;
   }
-  
+
   @media screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
     font-size: 40px;
     top: 15px;
     right: 35px;
     }
   }
 
-  p {
-    transition: 0.4s;
-    width: 500px;
-}
-#mylink {
-    display: none;
+.container {
+  width: 200px;
+  height: 500px;
+  margin: 10px;
+  position: fixed;
+  background-color: #818181;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  right: 0;
 }
 
-.container {
-  margin: 15px;
-    display: inline-block;
-    cursor: pointer;
-    position: fixed;
-    top: auto;
-    right: 20px;
+#mylink {
+  display: none;
+}
+
+.logo h1 {
+  font-size: 50px;
+}
+
+.logo {
+  width: 100%; height: 80px;
+  background-color: rgba(17, 110, 231, 0.5);
+  color: #f1f1f1;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  position: fixed;
+  top: 0; right: 0;
+  margin: 17px;
 }
 
 .bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
-    transition: 0.4s;
-    
-}
-.change .bar1 {
-    transform:translate(0, 11px) rotate(-45deg);
+  width: 35px;  height: 5px;
+  background-color: #f1f1f1;
+  margin: 6px 0;
+  transition: 0.4s;
+  border-radius: 10px;
 }
 
+.change .bar1 {
+  transform:translate(0, 11px) rotate(-45deg);
+}
 .change .bar2 {
-    opacity: 0;
+  opacity: 0;
 }
 .change .bar3 {
-    transform:translate(0, -11px) rotate(45deg);
+  transform:translate(0, -11px) rotate(45deg);
 }
 
-.text1 {
-  width: 40%;
-  height: 10%;
-  background-color: aqua;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-bottom-right-radius: 20px;
+.text1{
+  background-color: #818181;
+  width: 400px;  height: 100px;
   border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: fixed;
+  bottom: 0; left: 0;
+  display: flex;
+  align-items: center;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Oswald:300);
-@import url(https://fonts.googleapis.com/css?family=Abel);
-
-body {
-  margin: 0;
-  overflow: hidden;
-  background: #E9E9E9;
+ul:hover {
+  color: #f1f1f1;
 }
 
 #Profile {
-  position: absolute;
   margin: auto;
-  top: 0; right: 0; bottom: 60%; left: 0;
   width: 150px; height: 150px;
   border-radius: 150px;
 }
 
-#Profile:before {
+/* #Profile:before {
   content: '';
   position: absolute;
   top: -8px; left: -8px;
   width: 162px; height: 162px;
-  border-radius: 162px;
   border: 2px solid #BCBCBC;
 }
 
@@ -157,11 +139,12 @@ body {
   position: absolute;
   top: -13px; left: -13px;
   width: 172px; height: 172px;
-  border-radius: 172px;
   border: 2px solid #FF9900;
-}
+} */
 
 #Profile img {
+  width: 150px;
+  height: 150px;
   border-radius: 150px;
 }
 
