@@ -6,16 +6,13 @@ function closeNav() {
     document.getElementById("myNav").style.width = "0%";
 }
 
-function myFunction() {
-    let x = document.getElementById("mylink");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    }
-    else {
-        x.style.display = "block";
-    }
-}
+function myFunctions(i) {
+    i.classList.toggle("change");
 
-function myFunction(x) {
-  x.classList.toggle("change");
+    let x = document.getElementById("mylink");
+    if (x.className === 'menu') {
+        x.className += ' menu-active'
+    }   else {
+            x.className = "menu";
+    }
 }
